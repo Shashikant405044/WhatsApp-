@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChatFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/startdatetxt"
+        android:text="Select Start Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:text="24 Jul 2019"
+        android:editable="false"
+        android:clickable="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/round"
+        android:layout_below="@id/startdatetxt"
+        android:id="@+id/cla"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/cla"
+        android:layout_marginTop="10dp"
+        android:id="@+id/selecttimetxt"
+        android:text="Select Time Slot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/liniar"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/cla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/recView"
+            android:layout_width="match_parent"
+            android:background="@drawable/round"
+            android:layout_height="38dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/liniar"
+        android:text="Select The Services"
+        android:id="@+id/selecttheservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="20dp"
+        android:id="@+id/services_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selecttheservice" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@id/services_recycler"
+            android:background="@drawable/rounded"
+            android:layout_marginBottom="5dp"
+            android:textColor="#ffff"
+            android:text="Total Amount Rs.545 Continue"
+            android:gravity="center"
+            android:id="@+id/btnamount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</ScrollView>
